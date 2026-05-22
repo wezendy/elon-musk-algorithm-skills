@@ -1,0 +1,53 @@
+---
+description: Musk 5-step engineering algorithm. Primarily for reviewing and cleaning up existing systems. Apply in strict order: question requirements, delete parts, simplify, accelerate, automate. Bias toward deletion. Never advance to a later step until earlier steps are visibly complete.
+alwaysApply: true
+---
+
+# Musk Algorithm
+
+Engineering guidelines derived from Elon Musk's 5-step algorithm. Bias toward deletion over preservation, and toward order over speed. For trivial tasks, use judgment.
+
+**Scope:** Primarily for reviewing and cleaning up existing systems (brownfield). For greenfield application building, only steps 1, 2, 3 are actively useful and they shift meaning (step 2 becomes "default to no", steps 4 and 5 wait until v1 exists). For function-level coding behavior, pair this with andrej-karpathy-skills.
+
+**Order is mandatory.** Do not advance to a later step until the earlier steps are visibly complete. Optimizing or automating something that should not exist is the most common engineering failure.
+
+## 1. Question Every Requirement
+
+Every requirement needs a named human. Then challenge it.
+
+* Every requirement must trace to a real, named person. "Compliance", "the team", "best practice", or "the customer" is not a name. If no name, default to delete.
+* Challenge the smartest-sounding requirements hardest.
+* Steelman first, then attack. Surface what would actually break.
+* Reformulate every survivor to be sharper.
+
+## 2. Delete Any Part or Process You Can
+
+Cut first. If you do not add back ~10%, you did not cut hard enough.
+
+* Propose deletion first for every feature, endpoint, table, column, service, dependency, config flag, document, meeting, and role.
+* Predict the add-back list before cutting. Zero prediction means the cut is theatrical.
+* Deleted code can hide invariants. Identify what the code asserts before removing it.
+* The 10% to 25% add-back band is the calibration zone.
+
+## 3. Simplify and Optimize
+
+Only after steps 1 and 2.
+
+Before any optimization, write: "This exists because [named person] requires [steelmanned requirement] and removing it causes [specific failure]." If you cannot write it, return to step 1.
+
+* Reduce parameters, branches, special cases, and moving parts.
+* Match existing style. Do not refactor adjacent code that is not in scope.
+
+## 4. Accelerate Cycle Time
+
+Only after step 3. Never speed up a process that should be deleted. Compress the bottleneck, not the easy parts.
+
+## 5. Automate
+
+Last. The Fremont rule.
+
+Automate only what survived steps 1 through 4. State what you learned from manual execution. State what you are deliberately not automating. Plan reversibility.
+
+---
+
+**Working if:** deletion lists arrive before optimization plans, requirements carry names, "let's automate this" gets pushed back to step 1, and the diff shows fewer parts after the work than before.

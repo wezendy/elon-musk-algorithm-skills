@@ -1,0 +1,18 @@
+{
+  "name": "elon-musk-algorithm-skills",
+  "description": "Engineering decision framework based on Elon Musk's 5-step algorithm: question requirements, delete parts, simplify and optimize, accelerate cycle time, automate. Decomposed into 6 skills with strict order enforcement and Obsidian-compatible wiki links.",
+  "version": "1.0.0",
+  "author": {
+    "name": "wezendy"
+  },
+  "license": "MIT",
+  "keywords": ["engineering", "decision-making", "musk", "algorithm", "deletion", "simplification", "automation", "skills", "obsidian"],
+  "skills": [
+    "./skills/musk-algorithm",
+    "./skills/musk-step-1-question-requirements",
+    "./skills/musk-step-2-delete-parts",
+    "./skills/musk-step-3-simplify-optimize",
+    "./skills/musk-step-4-accelerate-cycle-time",
+    "./skills/musk-step-5-automate"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "name": "musk-algorithm-skills",
+  "id": "musk-algorithm-skills",
+  "owner": {
+    "name": "wezendy"
+  },
+  "metadata": {
+    "description": "Elon Musk's 5-step algorithm as skills for AI agents.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "elon-musk-algorithm-skills",
+      "source": "./",
+      "description": "Engineering decision framework based on Elon Musk's 5-step algorithm: question requirements, delete parts, simplify and optimize, accelerate cycle time, automate. Decomposed into 6 skills with strict order enforcement and Obsidian-compatible wiki links.",
+      "version": "1.0.0",
+      "author": {
+        "name": "wezendy"
+      },
+      "keywords": [
+        "engineering",
+        "decision-making",
+        "musk",
+        "algorithm",
+        "deletion",
+        "simplification",
+        "automation",
+        "skills",
+        "obsidian"
+      ],
+      "category": "workflow"
+    }
+  ]
+}
